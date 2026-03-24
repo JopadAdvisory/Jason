@@ -1,0 +1,38 @@
+.primary-btn,
+.secondary-btn {
+    padding: 16px 24px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: transform 0.2s cubic-bezier(.4, 0, .2, 1), background-color 0.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.primary-btn:active,
+.secondary-btn:active {
+    transform: scale(0.95);
+}
+
+.primary-btn {
+    background-color: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    box-shadow: 0 10px 15px -3px var(--primary-btn-shadow), 0 4px 6px -4px var(--primary-btn-shadow);
+    transition: border 0.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+    border: 1px solid var(--accent-hover);
+}
+
+.secondary-btn {
+    background-color: var(--card);
+    color: var(--text-h);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    background-color: var(--bg)
+}

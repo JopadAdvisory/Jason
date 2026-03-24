@@ -8,15 +8,12 @@ function Hero(): JSX.Element {
     return (
         <div className="hero-bg">
             <div className="hero-content">
-                <div className="bg-container" aria-hidden="true">
-                    <span className="desktop-bg"></span>
-                </div>
                 <div className="content-container">
                     <div className="img-container">
                         <img src={HeroImage} alt="Jason smiling with his family" className="hero-image" />
                     </div>
                     <h4 className="hero-header">
-                        <LucideHeart className="hero-icon" strokeWidth={2} />
+                        <LucideHeart className="hero-icon" strokeWidth={3} />
                         Urgent Campaign
                     </h4>
                     <h1 className="hero-heading">Help Jason Use His Hands Again</h1>
@@ -26,14 +23,19 @@ function Hero(): JSX.Element {
                     <p className="hero-sub">
                         Doctors recommend surgery before his bones grow stronger — early intervention is critical for success.
                     </p>
-                    <div className="btn-container">
+                    <div className="hero-btn-container">
                         <Button
-                            href="https://www.gofundme.com/f/help-jason-use-his-hands-again"
-                            className="primary-btn"
+                            href="#"
+                            className="primary-btn hero-btn1"
                         >
                             Donate Now
                         </Button>
-
+                        <Button
+                            href="#"
+                            className="secondary-btn hero-btn2"
+                        >
+                            Read Jason's Story
+                        </Button>
                     </div>
                 </div>
             </div>

@@ -47,8 +47,67 @@
   margin-top: 15px;
 }
 
+.hero-btn-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-btn1 {
+    font-weight: 600;
+}
+
 @media (min-width: 768px) {
     .img-container {
         display: none;
+    }
+
+    .hero-bg {
+        background: url("../assets/images/hero.webp");
+        background-repeat: none;
+        background-size: cover;
+        width: 100%;
+        min-height: clamp(540px, 80vh, 720px);
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-header,
+    .hero-sub {
+        color: hsl(160, 55%, 60%);
+    }
+    .hero-sub {
+        font-weight: 600;
+    }
+    .hero-heading {
+        color: white;
+    }
+    .hero-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.4), rgba(0,0,0,0.2), transparent, transparent);
+    }
+    .hero-content {
+        height: 100%;
+        width: 90%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .content-container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-content {
+        width: min(80%, 1126px);
     }
 }

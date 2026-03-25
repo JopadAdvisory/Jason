@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import { Heart, Menu, X } from "lucide-react";
 import "./NavBar.css";
 
-function NavBar() {
+
+function NavBar(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    return (
+   
+   return (
         <div className="nav-container">
             <nav className="top-nav">
                 <div className="top-header">
@@ -13,7 +15,7 @@ function NavBar() {
                           className="logo-icon" 
                           strokeWidth={3}
                         />
-                        Help Jason
+                        Urgent Campaign
                     </p>
                     <button
                       className="nav-btn"
@@ -36,13 +38,10 @@ function NavBar() {
                             <a href="">Donate</a>
                         </li>
                         <li>
-                            <a href="">Medical Information</a>
-                        </li>
-                        <li>
                             <a href="">Updates</a>
                         </li>
                         <li>
-                            <a href="">Contact</a>
+                            <a href="" className="primary-btn">Donate Now</a>
                         </li>
                   </ul>
                 </div>

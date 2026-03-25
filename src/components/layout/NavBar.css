@@ -58,24 +58,25 @@
     top: 101%;
     left: 0;
     right: 0;
-    z-index: 5;
+    z-index: 4;
     backdrop-filter: blur(10px);
 }
 
 .nav-links {
     width: 90%;
-    max-height: 0;
-    opacity: 0;
     list-style-type: none;
     margin: 0;
-    padding: 0 0;
-    transform: translateY(-20px);
-    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+    padding: 0;
     margin-inline: auto;
 }
 
+.nav-links.open {
+    display: block;
+}
+
 .nav-links li {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .nav-links li a {
@@ -83,40 +84,81 @@
     font-weight: 600;
     display: block;
     color: var(--text);
-    transition: color .5s ease-in-out;
+    transition: color .3s ease-in-out;
 }
 
+.nav-links li:last-child a {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 26px;
+    text-align: center;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.nav-links li:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li:hover:last-child a {
+    color: white;
+}
 
 .nav-links li:hover a {
     color: var(--text-h);
 }
 
-.nav-links.open {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-}
 @media (min-width: 768px) {
     .top-body {
-        position: static;
+        position: initial;
+    }
+
+    .nav-links li a {
+        position: relative;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: var(--accent);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: width .3s ease-in-out;
+    }
+    
+    .nav-links li:not(:last-child) a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .nav-links li:last-child {
+        border-top: none;
+    }
+    .nav-container {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border: none;
     }
 
     .top-nav {
         display: flex;
-        align-content: ;
-        justify-content: center;
-        border: 2px solid red;
+        background-color: transparent;
+        justify-content: space-between;
+        padding: 10px;
     }
-    .nav-links li {
-        border: 2px solid red;
-        text-wrap: ;
-        padding: none;
+    .top-body {
+        backdrop-filter: initial;
+        background-color: transparent;
     }
     .nav-links {
-        max-height: initial;
-        opacity: 1;
         display: flex;
         gap: 20px;
+        align-items: center;
+        width: 100%;
     }
 
 

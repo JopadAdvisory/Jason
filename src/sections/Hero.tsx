@@ -1,4 +1,3 @@
-import { LucideHeart } from "lucide-react";
 import HeroImage from "../assets/images/1.webp";
 import type { JSX } from "react";
 import "./Hero.css";
@@ -13,10 +12,6 @@ function Hero(): JSX.Element {
                     <div className="img-container">
                         <img src={HeroImage} alt="Jason smiling with his family" className="hero-image" />
                     </div>
-                    <h4 className="hero-header">
-                        <LucideHeart className="hero-icon" strokeWidth={3} />
-                        Urgent Campaign
-                    </h4>
                     <h1 className="hero-heading">Help Jason Use His Hands Again</h1>
                     <p className="hero-subtitle">
                         Jason was born with congenital deformities affecting both hands, making everyday tasks a struggle. He urgently needs corrective surgery to live a normal, independent life.

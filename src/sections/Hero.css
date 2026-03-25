@@ -58,6 +58,8 @@
         background-repeat: none;
         background-size: cover;
         width: 100%;
+        /* aspect-ratio: 16 / 9; */
+        background-position: 0 40px;
         min-height: clamp(540px, 80vh, 720px);
 
         margin-top: initial;
@@ -88,7 +90,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.4), rgba(0,0,0,0.2), transparent, transparent);
+        background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.4), rgba(0,0,0,0.2), transparent, transparent, transparent);
     }
 
     .hero-content {
@@ -96,7 +98,6 @@
         position: relative;
         z-index: 1;
         padding-top: 100px;
-        
     }
     
     .content-container {

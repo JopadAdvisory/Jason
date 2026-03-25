@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { useProgressStore } from "../../store";
+import { useProgressStore } from "../../progressStore";
 import "./progress.css";
 
 

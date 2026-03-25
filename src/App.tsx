@@ -2,6 +2,7 @@ import Hero from './sections/Hero';
 import NavBar from './components/layout/Navbar';
 import Reasons from './sections/Reasons';
 import './App.css'
+import StoryDonation from './sections/storyDonation';
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <NavBar />
             <Hero />
             <Reasons />
+            <StoryDonation />
         </div>
     )
 }

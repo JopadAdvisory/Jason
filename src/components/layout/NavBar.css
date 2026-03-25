@@ -97,16 +97,37 @@
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-.nav-links li:last-child {
-    /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
-}
-
 .nav-links li:hover:last-child a {
     color: white;
 }
 
 .nav-links li:hover a {
     color: var(--text-h);
+}
+
+.bottom-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 5;
+}
+
+.bottom-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.bottom-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    padding: 10px
 }
 
 @media (min-width: 768px) {

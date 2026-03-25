@@ -136,6 +136,9 @@
         box-shadow: initial;
     }
 
+    .bottom-cta {
+        display: none;
+    }
     .nav-links li a {
         position: relative;
     }

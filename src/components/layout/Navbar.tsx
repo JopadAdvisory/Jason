@@ -10,13 +10,13 @@ function NavBar(): JSX.Element {
         <div className="nav-container">
             <nav className="top-nav">
                 <div className="top-header">
-                    <p className="logo">
+                    <h4 className="logo">
                         <Heart 
                           className="logo-icon" 
                           strokeWidth={3}
                         />
                         Urgent Campaign
-                    </p>
+                    </h4>
                     <button
                       className="nav-btn"
                       aria-label="Toggle Menu"

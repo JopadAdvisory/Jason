@@ -1,0 +1,133 @@
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+
+.top-nav {
+    width: 90%;
+    padding-block: 16px;
+    margin-inline: auto;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.logo {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btn {
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    z-index: 5;
+    margin-top: 5px;
+    color: var(--text-h);
+    background: none;
+
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.top-body {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 101%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    width: 90%;
+    max-height: 0;
+    opacity: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0;
+    transform: translateY(-20px);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    margin-inline: auto;
+}
+
+.nav-links li {
+    padding: 10px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    color: var(--text);
+    transition: color .5s ease-in-out;
+}
+
+
+.nav-links li:hover a {
+    color: var(--text-h);
+}
+
+.nav-links.open {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (min-width: 768px) {
+    .top-body {
+        position: static;
+    }
+
+    .top-nav {
+        display: flex;
+        align-content: ;
+        justify-content: center;
+        border: 2px solid red;
+    }
+    .nav-links li {
+        border: 2px solid red;
+        text-wrap: ;
+        padding: none;
+    }
+    .nav-links {
+        max-height: initial;
+        opacity: 1;
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .nav-icon {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    .top-nav {
+        width: min(80%, 1126px);
+    }
+}
+
+

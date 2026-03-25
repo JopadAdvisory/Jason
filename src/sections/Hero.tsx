@@ -3,6 +3,7 @@ import HeroImage from "../assets/images/1.webp";
 import type { JSX } from "react";
 import "./Hero.css";
 import { Button } from "../components/ui/buttons";
+import Progress from "../components/ui/progress";
 
 function Hero(): JSX.Element {
     return (
@@ -36,6 +37,9 @@ function Hero(): JSX.Element {
                         >
                             Read Jason's Story
                         </Button>
+                    </div>
+                    <div className="progress-container">
+                        <Progress />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,52 @@
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.bar-header {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: .9rem
+}
+
+.bar-header p:first-child {
+    color: var(--text-h);
+    font-weight: 600;
+}
+
+.bar-container {
+    background: hsl(40, 9%, 86%);
+    height: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.bar {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: var(--accent);
+    transition: width .5s ease-out;
+}
+
+.percentage {
+    font-size: .83rem;
+}
+
+@media (min-width: 768px) {
+    .bar-header p:first-child {
+        color: white;
+    }
+
+    .bar-header,
+    .percentage {
+      color: rgba(255, 255, 255, 0.9);
+   
+    }
+}

@@ -79,7 +79,7 @@
 }
 
 .nav-links li {
-    padding: 8px 0;
+    padding: 18px 0;
 }
 
 .nav-links li a {
@@ -117,6 +117,10 @@
 
     .nav-links li a {
         position: relative;
+    }
+
+    .nav-links li {
+        padding: 8px 0;
     }
 
     .nav-links.open {
@@ -170,6 +174,7 @@
         display: none;
     }
 }
+
 @media (min-width: 1024px) {
     .top-nav {
         width: min(80%, 1126px);

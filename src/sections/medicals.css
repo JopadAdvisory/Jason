@@ -1,0 +1,68 @@
+.med-bg {
+    scroll-margin-top: 50px;
+}
+.med-container {
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 30px 50px;
+}
+
+.med-header {
+    text-align: center;
+}
+.med-subtitle {
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
+.med-cards {
+    display: grid;
+    margin-top: 40px;
+    gap: 25px;
+}
+
+.med-cards p {
+    font-size: .9rem;
+}
+
+.med-icon {
+    color: hsl(25 80% 52%);
+    background-color: hsla(25, 80%, 52%, 0.068);
+    border-radius: 10px;
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+}
+.med-card h4 {
+    color: var(--text-h)
+}
+.med-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .med-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .med-container {
+        width: min(80%, 1126px);
+    }
+    
+    .med-header {
+        font-size: 40px;
+    }
+}
+@media (min-width: 1440px) {
+    .med-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

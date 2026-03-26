@@ -6,7 +6,7 @@ import Progress from "../components/ui/progress";
 
 function Hero(): JSX.Element {
     return (
-        <div className="hero-bg">
+        <div className="hero-bg" id="home">
             <div className="hero-content">
                 <div className="content-container">
                     <div className="img-container">
@@ -21,20 +21,24 @@ function Hero(): JSX.Element {
                     </p>
                     <div className="hero-btn-container">
                         <Button
-                            href="#"
+                            href="#donate"
                             className="primary-btn hero-btn1"
                         >
                             Donate Now
                         </Button>
                         <Button
-                            href="#"
+                            href="#story"
                             className="secondary-btn hero-btn2"
                         >
                             Read Jason's Story
                         </Button>
                     </div>
                     <div className="progress-container">
-                        <Progress />
+                        <Progress 
+                          barHeader="bar-head"
+                          percent="percent"
+                          raise="raise"
+                        />
                     </div>
                 </div>
             </div>

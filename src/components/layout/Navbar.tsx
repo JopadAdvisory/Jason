@@ -12,13 +12,15 @@ function NavBar(): JSX.Element {
             <div className="nav-container">
                 <nav className="top-nav">
                     <div className="top-header">
-                        <h4 className="logo">
-                            <Heart 
-                            className="logo-icon" 
-                            strokeWidth={3}
-                            />
-                            Urgent Campaign
+                        <a className="logo-link" href="#home">
+                            <h4 className="logo">
+                                <Heart 
+                                className="logo-icon" 
+                                strokeWidth={3}
+                                />
+                                Urgent Campaign
                         </h4>
+                        </a>
                         <button
                         className="nav-btn"
                         aria-label="Toggle Menu"
@@ -31,19 +33,19 @@ function NavBar(): JSX.Element {
                     <div className="top-body">
                         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                             <li>
-                                <a href="">Home</a>
+                                <a href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="">Story</a>
+                                <a href="#story">Story</a>
                             </li>
                             <li>
-                                <a href="">Donate</a>
+                                <a href="#medical">Medical Info</a>
                             </li>
                             <li>
-                                <a href="">Updates</a>
+                                <a href="#update">Updates</a>
                             </li>
                             <li>
-                                <a href="" className="primary-btn">Donate Now</a>
+                                <a href="#donate" className="primary-btn">Donate Now</a>
                             </li>
                     </ul>
                     </div>
@@ -52,7 +54,7 @@ function NavBar(): JSX.Element {
             <div className="bottom-cta">
                 <Button
                     className="primary-btn bottom-btn"
-                    href=""
+                    href="#donate"
                 >
                     <Heart 
                         className="bottom-icon"

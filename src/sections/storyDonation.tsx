@@ -15,7 +15,7 @@ export default function StoryDonation(): JSX.Element {
     return (
         <div className="story-donation-bg">
             <div className="ds-container">
-                <div className="story-container">
+                <div className="story-container" id="story">
                     <div className="story-image-container">
                         <img src={StoryImage} alt="A picture of jason smiling" className="story-image" />
                     </div>
@@ -30,7 +30,7 @@ export default function StoryDonation(): JSX.Element {
                     <a href="" className="full-story">Read Full Story →</a>
                 </div>
 
-                <div className="form-container">
+                <div className="form-container" id="donate">
                     <div className="donation-container">
                         <div className="donation-header">
                             <Heart className="donation-icon"/>
@@ -59,16 +59,14 @@ export default function StoryDonation(): JSX.Element {
                         </div>
                         <input 
                             type="number"
+                            min="1000"
+                            max="10_000_000"
                             name="donationAmount"
                             value={amount || ""}
                             placeholder="Enter custom amount (₦)"
                             onChange={handleChange}
                         />
-                        {
-                            (amount ?? 0) < 100
-                            ? <button className="submit primary-btn" disabled>Donate ₦{amount}</button>
-                            : <button className="submit primary-btn">Donate ₦{amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " "}</button>
-                        }
+                        <button className="submit primary-btn">Donate ₦{amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " "}</button>
                         <p className="secure">Payments secured via Paystack. Your details are safe.</p>
                     </div>
                     <div className="form-image-container">

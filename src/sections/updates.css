@@ -1,0 +1,95 @@
+ .progress-update-bg {
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 50px;
+ }
+ .update-subtitle {
+    margin-top: -10px;
+ }
+ .pro-bg,
+ .diff-updates {
+    margin-top: 40px;
+ }
+ .pro-bg,
+ .update-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: var(--radius);
+ }
+ .pro-header {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 34px;
+    margin-bottom: 26px;
+    justify-content: space-between;
+ }
+ .goal,
+ .rai,
+ .donors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+ }
+ .u-icon {
+    color: var(--accent);
+    height: 20px;
+    width: 20px;
+ }
+ .number {
+    color: var(--text-h);
+    font-weight: 700;
+ }
+ .progress-header {
+    text-align: center;
+ }
+ .text {
+    font-size: .85rem;
+ }
+ .date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+ }
+ .diff-updates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ .date-icon {
+    width: 15px;
+    height: 15px;
+ }
+ .update-text {
+    font-size: .8rem;
+    color:  var(--text-h);
+ }
+ @media (min-width: 768px) {
+    .wr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 50px;
+    }
+    .ol {
+        display: none;
+    }
+    .update-subtitle {
+        width: 46ch;
+        margin-inline: auto;
+    }
+ }
+ @media (min-width: 1024px) {
+     .update-subtitle {
+        margin-top: -25px;
+     }
+     .progress-update-bg {
+         width: min(80%, 1126px);
+        }
+        .update-heading {
+        font-size: 40px;
+    }
+ }

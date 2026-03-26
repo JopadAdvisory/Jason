@@ -1,6 +1,6 @@
 .story-donation-bg {
     background: var(--secondary-bg);
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .ds-container {
@@ -38,7 +38,7 @@
 .story-image {
     transform: scale(1.2);
     height: 100%;
-    object-position: 25px 5%;
+    object-position: 18px 5%;
 }
 
 .form-image {
@@ -55,6 +55,10 @@
 
 .story-container {
     margin-bottom: 50px;
+    scroll-margin-top: 120px;
+}
+.form-container {
+    scroll-margin-top: 120px;
 }
 
 .full-story:hover {
@@ -145,14 +149,16 @@ input[type="number"] {
 
 @media (min-width: 768px) {
     .ds-container {
-        width: min(80%, 1126px);
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 50px;
-
+        
     }
 }
 @media (min-width: 1024px) {
+    .ds-container {
+        width: min(80%, 1126px);
+    }
     .story-header {
         font-size: 40px;
     }

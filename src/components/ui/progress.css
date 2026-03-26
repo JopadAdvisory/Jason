@@ -13,7 +13,7 @@
     font-size: .9rem
 }
 
-.bar-header p:first-child {
+.raised {
     color: var(--text-h);
     font-weight: 600;
 }
@@ -37,16 +37,4 @@
 
 .percentage {
     font-size: .83rem;
-}
-
-@media (min-width: 768px) {
-    .bar-header p:first-child {
-        color: white;
-    }
-
-    .bar-header,
-    .percentage {
-      color: rgba(255, 255, 255, 0.9);
-   
-    }
 }

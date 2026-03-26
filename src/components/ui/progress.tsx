@@ -2,16 +2,15 @@ import type { JSX } from "react";
 import { useProgressStore } from "../../progressStore";
 import "./progress.css";
 
-
-function Progress(): JSX.Element {
+function Progress({ barHeader, percent, raise}: { barHeader?: string, percent?: string, raise?: string }): JSX.Element {
     const raised = useProgressStore((state) => state.raised);
     const goal = useProgressStore((state) => state.goal);
     const percentage = useProgressStore((state) => state.getPercentage());
 
     return (
         <div className="progress-container">
-            <div className="bar-header">
-                <p className="raised">
+            <div className={`bar-header ${barHeader}`}>
+                <p className={`raised ${raise}`}>
                     ₦
                     {raised.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " "}
                     raised
@@ -25,7 +24,7 @@ function Progress(): JSX.Element {
             <div className="bar-container">
                 <div className="bar" style={{ width: `${percentage}%`}}></div>
             </div>
-            <p className="percentage">{percentage}% of goal reached</p>
+            <p className={`percentage ${percent}`}>{percentage}% of goal reached</p>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 .hero-bg {
     background: var(--secondary-bg);
     margin-top: 50px;
+    scroll-margin-top: 50px;
 }
 
 .hero-content {
@@ -100,7 +101,15 @@
         z-index: 1;
         padding-top: 100px;
     }
-    
+
+    .raise {
+        color: white !important;
+    }
+
+    .bar-head,
+    .percent {
+      color: rgba(255, 255, 255, 0.9);
+    }
     .content-container {
         width: 50%;
     }

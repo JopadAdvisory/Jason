@@ -6,7 +6,7 @@
     cursor: pointer;
     border-radius: var(--radius);
     text-decoration: none;
-    transition: transform 0.2s cubic-bezier(.4, 0, .2, 1), background-color 0.2s cubic-bezier(.4, 0, .2, 1);
+    transition: transform 0.5s cubic-bezier(.4, 0, .2, 1), background-color 0.3s cubic-bezier(.4, 0, .2, 1);
 }
 
 .primary-btn:active,
@@ -19,7 +19,7 @@
     color: white;
     border: 1px solid var(--accent);
     box-shadow: 0 10px 15px -3px var(--primary-btn-shadow), 0 4px 6px -4px var(--primary-btn-shadow);
-    transition: border 0.2s cubic-bezier(.4, 0, .2, 1);
+    transition: border 0.3s cubic-bezier(.4, 0, .2, 1);
 }
 
 .primary-btn:hover {

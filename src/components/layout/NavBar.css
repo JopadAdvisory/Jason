@@ -91,17 +91,13 @@
 }
 
 .nav-links li:last-child a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
     padding: 8px 26px;
     text-align: center;
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
-.nav-links li:hover:last-child a {
-    color: white;
-}
-
-.nav-links li:hover a {
+.nav-links li:not(:last-child):hover a {
     color: var(--text-h);
 }
 

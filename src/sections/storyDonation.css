@@ -1,6 +1,6 @@
 .story-donation-bg {
     background: var(--secondary-bg);
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 .ds-container {
@@ -9,25 +9,42 @@
     width: 90%;
 }
 
-.story-image-container {
+.story-image-container,
+.form-image-container {
     overflow: hidden;
     width: 100%;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     border-radius: var(--radius);
+}
+
+.story-image-container {
     height: 400px;
 }
 
+.form-image-container {
+    height: 240px;
+    margin-top: 30px;
+}
 .second-story {
     margin-block: 20px;
 }
 
-.story-image {
+.story-image,
+.form-image {
     object-fit: cover;
-    object-position: -10px -10px;
     width: 100%;
-    transform: scale(1.2);
-    height: 100%;
 }
 
+.story-image {
+    transform: scale(1.2);
+    height: 100%;
+    object-position: 25px 5%;
+}
+
+.form-image {
+    object-position: 0 54%;
+    height: 100%;
+}
 .full-story {
     color: var(--accent);
     font-weight: 500;
@@ -48,6 +65,7 @@
     background-color: var(--card);
     padding: 30px;
     border-radius: var(--radius);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -123,6 +141,8 @@ input[type="number"] {
     font-size: .8rem;
     text-align: center;
 }
+
+
 @media (min-width: 768px) {
     .ds-container {
         width: min(80%, 1126px);

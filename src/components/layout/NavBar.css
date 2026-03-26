@@ -92,6 +92,9 @@
     transition: color .3s ease-in-out;
 }
 
+.nav-links li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 .nav-links li:last-child a {
     color: rgba(255, 255, 255, 1);
     padding: 8px 26px;

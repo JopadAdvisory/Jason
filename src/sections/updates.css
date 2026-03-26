@@ -63,6 +63,9 @@
     width: 15px;
     height: 15px;
  }
+ .ol {
+   margin-top: 70px;
+ }
  .update-text {
     font-size: .8rem;
     color:  var(--text-h);

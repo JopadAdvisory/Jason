@@ -15,16 +15,34 @@ export default function Hands(): JSX.Element {
                 </div>
                 <div className="hands-img-container">
                     <div className="hand-image-container">
-                        <img src={HandOne} alt="First picture of jason's hands" className="hand-image" />
+                        <img 
+                          src={HandOne} 
+                          alt="First picture of jason's hands" 
+                          loading="lazy"
+                          className="hand-image" 
+                        />
                     </div>
                     <div className="hand-image-container">
-                        <img src={HandTwo} alt="Second picture of Jason's hands" className="hand-image" />
+                        <img 
+                          src={HandTwo} 
+                          alt="Second picture of Jason's hands" 
+                          loading="lazy"
+                          className="hand-image" 
+                        />
                     </div>
                     <div className="hand-image-container">
-                        <img src={HandThree} alt="Third Picture of Jason's hands" className="hand-image" />
+                        <img 
+                          src={HandThree} 
+                          alt="Third Picture of Jason's hands" 
+                          loading="lazy"
+                          className="hand-image" />
                     </div>
                     <div className="hand-image-container">
-                        <img src={HandFour} alt="Fourth picture of Jason's hands" className="hand-image" />
+                        <img 
+                          src={HandFour} 
+                          alt="Fourth picture of Jason's hands" 
+                          loading="lazy"
+                          className="hand-image" />
                     </div>
                 </div>
             </div>

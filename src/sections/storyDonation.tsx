@@ -6,7 +6,7 @@ import type { JSX } from "react";
 import "./storyDonation.css";
 
 export default function StoryDonation(): JSX.Element {
-    const [ amount, setAmount ] = useState<number>();
+    const [ amount, setAmount ] = useState<number>(0);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         setAmount(Number(e.target.value));
@@ -17,7 +17,12 @@ export default function StoryDonation(): JSX.Element {
             <div className="ds-container">
                 <div className="story-container" id="story">
                     <div className="story-image-container">
-                        <img src={StoryImage} alt="A picture of jason smiling" className="story-image" />
+                        <img 
+                          src={StoryImage} 
+                          alt="A picture of jason smiling" 
+                          loading="lazy"
+                          className="story-image" 
+                        />
                     </div>
                     <h1 className="story-header">Jason's Story</h1>
                     <p className="first-story">
@@ -59,7 +64,7 @@ export default function StoryDonation(): JSX.Element {
                         </div>
                         <input 
                             type="number"
-                            min="1000"
+                            min="100"
                             max="10_000_000"
                             name="donationAmount"
                             value={amount || ""}
@@ -70,7 +75,11 @@ export default function StoryDonation(): JSX.Element {
                         <p className="secure">Payments secured via Paystack. Your details are safe.</p>
                     </div>
                     <div className="form-image-container">
-                        <img className="form-image" src={FormImage} alt="A picture of jason's hand" />
+                        <img 
+                          className="form-image" 
+                          loading="lazy"
+                          src={FormImage} alt="A picture of jason's hand" 
+                        />
                     </div>
                 </div> 
                     

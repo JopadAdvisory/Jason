@@ -17,6 +17,10 @@
     border-radius: var(--radius);
 }
 
+.story-image-container:hover .story-image,
+.form-image-container:hover .form-image {
+    transform: scale(1.05);
+}
 .story-image-container {
     height: 400px;
 }
@@ -33,12 +37,12 @@
 .form-image {
     object-fit: cover;
     width: 100%;
+    transition: transform .3s cubic-bezier(.4, 0, .2, 1);
 }
 
 .story-image {
-    transform: scale(1.2);
     height: 100%;
-    object-position: 18px 5%;
+    object-position: 0 15%;
 }
 
 .form-image {

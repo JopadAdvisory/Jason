@@ -10,7 +10,12 @@ function Hero(): JSX.Element {
             <div className="hero-content">
                 <div className="content-container">
                     <div className="img-container">
-                        <img src={HeroImage} alt="Jason smiling with his family" className="hero-image" />
+                        <img 
+                          src={HeroImage} 
+                          alt="Jason smiling with his family" 
+                          loading="lazy"
+                          className="hero-image" 
+                        />
                     </div>
                     <h1 className="hero-heading">Help Jason Use His Hands Again</h1>
                     <p className="hero-subtitle">

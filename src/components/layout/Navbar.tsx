@@ -15,17 +15,17 @@ function NavBar(): JSX.Element {
                         <a className="logo-link" href="#home">
                             <h4 className="logo">
                                 <Heart 
-                                className="logo-icon" 
-                                strokeWidth={3}
+                                  className="logo-icon" 
+                                  strokeWidth={3}
                                 />
                                 Urgent Campaign
                         </h4>
                         </a>
                         <button
-                        className="nav-btn"
-                        aria-label="Toggle Menu"
-                        type="button"
-                        onClick={() => setIsOpen(!isOpen)}
+                          className="nav-btn"
+                          aria-label="Toggle Menu"
+                          type="button"
+                          onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <X  className="nav-icon" /> : <Menu className="nav-icon" />}
                         </button>
@@ -47,7 +47,7 @@ function NavBar(): JSX.Element {
                             <li>
                                 <a href="#donate" className="primary-btn">Donate Now</a>
                             </li>
-                    </ul>
+                        </ul>
                     </div>
                 </nav>
             </div>

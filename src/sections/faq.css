@@ -1,0 +1,21 @@
+.faq-container-bg {
+    background-color: var(--secondary-bg);
+    padding-block: 50px;
+}
+.faq-container {
+    width: 90%;
+    margin-inline: auto;
+}
+.faq-header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.faq-subtitle {
+    padding-bottom: 25px;
+}
+
+@media (min-width: 1024px) {
+    .faq-container {
+        width: min(80%, 1126px);
+    }
+} 

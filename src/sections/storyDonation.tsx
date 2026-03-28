@@ -13,7 +13,10 @@ export default function StoryDonation(): JSX.Element {
     }
 
     return (
-        <div className="story-donation-bg">
+        <section 
+            aria-label="Jason's story and donation payment section"
+            className="story-donation-bg"
+        >
             <div className="ds-container">
                 <div className="story-container" id="story">
                     <div className="story-image-container">
@@ -84,6 +87,6 @@ export default function StoryDonation(): JSX.Element {
                 </div> 
                     
             </div>
-        </div>
+        </section>
     )
 }

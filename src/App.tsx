@@ -6,6 +6,7 @@ import StoryDonation from './sections/storyDonation';
 import Medicals from './sections/medicals';
 import Hands from './sections/hands';
 import Update from './sections/updates';
+import FAQ from './sections/faq';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Medicals />
             <Hands />
             <Update />
+            <FAQ />
         </div>
     )
 }

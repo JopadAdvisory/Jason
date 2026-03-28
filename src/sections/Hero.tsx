@@ -6,7 +6,11 @@ import Progress from "../components/ui/progress";
 
 function Hero(): JSX.Element {
     return (
-        <div className="hero-bg" id="home">
+        <section 
+            aria-label="Hero section showing Jason and general summary of the page"
+            className="hero-bg" 
+            id="home"
+        >
             <div className="hero-content">
                 <div className="content-container">
                     <div className="img-container">
@@ -47,7 +51,7 @@ function Hero(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

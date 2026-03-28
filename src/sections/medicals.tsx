@@ -4,7 +4,11 @@ import { Hand, Stethoscope, Syringe, TriangleAlert } from "lucide-react";
 
 export default function Medicals(): JSX.Element {
     return (
-        <div className="med-bg" id="medical">
+        <section 
+            className="med-bg" 
+            id="medical"
+            aria-label="Medical information on Jason verified by a medical staff"
+        >
             <div className="med-container">
                 <div className="med-header">
                     <h1 className="med-header">Medical Information</h1>
@@ -41,6 +45,6 @@ export default function Medicals(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

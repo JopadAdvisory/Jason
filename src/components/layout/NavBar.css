@@ -143,7 +143,9 @@
     .nav-links li a {
         position: relative;
     }
-
+    .nav-links li:not(:last-child) {
+        border-bottom: none;
+    }
     .nav-links li {
         padding: 8px 0;
     }

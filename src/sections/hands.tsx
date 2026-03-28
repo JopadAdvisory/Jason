@@ -7,7 +7,10 @@ import "./hands.css";
 
 export default function Hands(): JSX.Element {
     return (
-        <div className="hands-bg">
+        <section 
+            aria-label="Jason's hands"
+            className="hands-bg"
+        >
             <div className="hands-container">
                 <div className="hands-header">
                     <h1 className="hands-heading">Jason's hands</h1>
@@ -46,6 +49,6 @@ export default function Hands(): JSX.Element {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

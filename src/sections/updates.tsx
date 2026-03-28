@@ -9,7 +9,11 @@ export default function Update() {
     const goal = useProgressStore((state) => state.goal);
     const donors = useProgressStore((state) => state.donors);
     return (
-        <div className="progress-update-bg" id="update">
+        <section 
+          className="progress-update-bg" 
+          id="update"
+          aria-label="Updates regarding jason's donation"
+        >
             <div className="progress-header">
                 <h1 className="update-heading">Campaign Progress</h1>
                 <p className="update-subtitle">Stay informed on Jason's journey with full transparency on every naira raised</p>
@@ -81,6 +85,6 @@ export default function Update() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

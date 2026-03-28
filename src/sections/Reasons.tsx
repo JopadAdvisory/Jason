@@ -4,7 +4,10 @@ import { Clock, HeartHandshake, Shield } from "lucide-react";
 
 export default function Reasons(): JSX.Element {
     return (
-        <div className="reasons-container">
+        <section 
+            aria-label="Reasons to help Jason"
+            className="reasons-container"
+        >
             <h1 className="reasons-header">Why Jason Needs Your Help</h1>
             <p className="reasons-subtitle">
                 Born on November 3, 2016, Jason is a determined boy who deserves the chance to use his hands freely. Your support can make that possible.
@@ -40,6 +43,6 @@ export default function Reasons(): JSX.Element {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

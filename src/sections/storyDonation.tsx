@@ -105,7 +105,24 @@ export default function StoryDonation(): JSX.Element {
                         >
                             But without surgery, his condition may become permanent as he grows older. The window for effective treatment is narrowing, and Jason's family needs your help to give him the future he deserves.
                         </motion.p>
-                        <a href="" className="full-story">Read Full Story →</a>
+                        {/* <motion.a 
+                            href="" className="full-story"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >Read Full Story →</motion.a> */}
                     </div>
                 </div>
 

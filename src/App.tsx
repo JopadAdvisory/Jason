@@ -7,6 +7,7 @@ import Medicals from './sections/medicals';
 import Hands from './sections/hands';
 import Update from './sections/updates';
 import FAQ from './sections/faq';
+import Footer from './components/layout/Footer';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Hands />
             <Update />
             <FAQ />
+            <Footer />
         </div>
     )
 }

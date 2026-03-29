@@ -7,7 +7,6 @@
 .accordion-item {
     background-color: var(--card);
     border-radius: var(--radius);
-    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     box-sizing: border-box;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -29,5 +28,5 @@
     color: var(--text-h);
 }
 .inner-content {
-    padding: 0px 15px 15px;
+    padding: 0px 20px 15px;
 }

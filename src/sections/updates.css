@@ -1,6 +1,7 @@
  .progress-update-bg {
     width: 90%;
     margin-inline: auto;
+    scroll-margin-top: 30px;
     padding-block: 50px;
  }
  .update-subtitle {

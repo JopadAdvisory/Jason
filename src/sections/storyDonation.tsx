@@ -25,7 +25,7 @@ export default function StoryDonation(): JSX.Element {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0}}
                         layout
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true, amount: 0.3 }}
                         transition={{ layout: {
                         type: "spring",
                         stiffness: 70,
@@ -45,33 +45,68 @@ export default function StoryDonation(): JSX.Element {
                           className="story-image" 
                         />
                     </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0}}
-                        layout
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ layout: {
-                        type: "spring",
-                        stiffness: 70,
-                        damping: 20,
-                        mass: 1.2
-                        },
-                        type: "spring",
-                        stiffness: 70,
-                        damping: 20,
-                        mass: 1.2
-                    }}  
-                    >
-                        <h1 className="story-header">Jason's Story</h1>
-                        <p className="first-story">
+                    <div>
+                        <motion.h1 
+                            className="story-header"
+                             initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >Jason's Story</motion.h1>
+                        <motion.p 
+                            className="first-story"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >
                             Despite his condition, Jason is intelligent, confident, and full of life. His strength and determination inspire everyone around him.
-                        </p>
+                        </motion.p>
 
-                        <p className="second-story">
+                        <motion.p 
+                            className="second-story"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >
                             But without surgery, his condition may become permanent as he grows older. The window for effective treatment is narrowing, and Jason's family needs your help to give him the future he deserves.
-                        </p>
+                        </motion.p>
                         <a href="" className="full-story">Read Full Story →</a>
-                    </motion.div>
+                    </div>
                 </div>
 
                 <div className="form-container" id="donate">
@@ -80,7 +115,7 @@ export default function StoryDonation(): JSX.Element {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0}}
                         layout
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true, amount: 0.3 }}
                         transition={{ layout: {
                         type: "spring",
                         stiffness: 70,
@@ -91,7 +126,7 @@ export default function StoryDonation(): JSX.Element {
                         stiffness: 70,
                         damping: 20,
                         mass: 1.2
-                    }}  
+                        }} 
                     >
                         <div className="donation-header">
                             <Heart className="donation-icon"/>
@@ -130,13 +165,30 @@ export default function StoryDonation(): JSX.Element {
                         <button className="submit primary-btn">Donate ₦{amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " "}</button>
                         <p className="secure">Payments secured via Paystack. Your details are safe.</p>
                     </motion.div>
-                    <div className="form-image-container">
+                    <motion.div 
+                        className="form-image-container"
+                        initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                    >
                         <img 
                           className="form-image" 
                           loading="lazy"
                           src={FormImage} alt="A picture of jason's hand" 
                         />
-                    </div>
+                    </motion.div>
                 </div> 
                     
             </div>

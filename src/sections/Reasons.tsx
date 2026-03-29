@@ -10,35 +10,53 @@ export default function Reasons(): JSX.Element {
             className="reasons-container"
             
         >
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0}}
-                layout
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ layout: {
-                type: "spring",
-                stiffness: 70,
-                damping: 20,
-                mass: 1.2
-                },
-                type: "spring",
-                stiffness: 70,
-                damping: 20,
-                mass: 1.2
-            }}  
-            >
-                <h1 className="reasons-header">Why Jason Needs Your Help</h1>
-                <p className="reasons-subtitle">
+            <div>
+                <motion.h1 
+                    className="reasons-header"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                }} 
+                >Why Jason Needs Your Help</motion.h1>
+                <motion.p 
+                    className="reasons-subtitle"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                }} 
+                >
                     Born on November 3, 2016, Jason is a determined boy who deserves the chance to use his hands freely. Your support can make that possible.
-                </p>
-            </motion.div>
+                </motion.p>
+            </div>
             <div className="card-container">
                 <motion.div 
                     className="card"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0}}
                     layout
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ layout: {
                     type: "spring",
                     stiffness: 70,
@@ -65,7 +83,7 @@ export default function Reasons(): JSX.Element {
                      initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0}}
                     layout
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ layout: {
                     type: "spring",
                     stiffness: 70,
@@ -92,7 +110,7 @@ export default function Reasons(): JSX.Element {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0}}
                     layout
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ layout: {
                     type: "spring",
                     stiffness: 70,

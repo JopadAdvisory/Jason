@@ -4,7 +4,7 @@
 .footer-container {
     width: 90%;
     margin-inline: auto;
-    padding-block: 50px 80px;
+    padding-block: 30px 80px;
 }
 .column-header {
     color: rgba(255, 255, 255, 0.9);
@@ -36,7 +36,7 @@
     gap: 10px;
 }
 .first {
-    /* color: var(--accent); */
+    color: var(--accent);
 }
 .column-two ul li a,
 .mail {
@@ -90,10 +90,12 @@
         gap: 50px;
         align-items: start;
     }
+    .footer-container {
+        padding-bottom: 10px;
+    }
 }
 @media (min-width: 1024px) {
     .footer-container {
         width: min(80%, 1126px);
-        padding-bottom: 10px;
     }
 }

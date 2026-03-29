@@ -3,6 +3,7 @@ import StoryImage from "../assets/images/6.webp";
 import FormImage from "../assets/images/5.webp";
 import React, { useState } from "react";
 import type { JSX } from "react";
+import { motion } from "framer-motion";
 import "./storyDonation.css";
 
 export default function StoryDonation(): JSX.Element {
@@ -19,27 +20,79 @@ export default function StoryDonation(): JSX.Element {
         >
             <div className="ds-container">
                 <div className="story-container" id="story">
-                    <div className="story-image-container">
+                    <motion.div
+                        className="story-image-container"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0}}
+                        layout
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ layout: {
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        },
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                    }}  
+                    >
                         <img 
                           src={StoryImage} 
                           alt="A picture of jason smiling" 
                           loading="lazy"
                           className="story-image" 
                         />
-                    </div>
-                    <h1 className="story-header">Jason's Story</h1>
-                    <p className="first-story">
-                        Despite his condition, Jason is intelligent, confident, and full of life. His strength and determination inspire everyone around him.
-                    </p>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0}}
+                        layout
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ layout: {
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        },
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                    }}  
+                    >
+                        <h1 className="story-header">Jason's Story</h1>
+                        <p className="first-story">
+                            Despite his condition, Jason is intelligent, confident, and full of life. His strength and determination inspire everyone around him.
+                        </p>
 
-                    <p className="second-story">
-                        But without surgery, his condition may become permanent as he grows older. The window for effective treatment is narrowing, and Jason's family needs your help to give him the future he deserves.
-                    </p>
-                    <a href="" className="full-story">Read Full Story →</a>
+                        <p className="second-story">
+                            But without surgery, his condition may become permanent as he grows older. The window for effective treatment is narrowing, and Jason's family needs your help to give him the future he deserves.
+                        </p>
+                        <a href="" className="full-story">Read Full Story →</a>
+                    </motion.div>
                 </div>
 
                 <div className="form-container" id="donate">
-                    <div className="donation-container">
+                    <motion.div 
+                        className="donation-container"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0}}
+                        layout
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ layout: {
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        },
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                    }}  
+                    >
                         <div className="donation-header">
                             <Heart className="donation-icon"/>
                             <h2>Make a Donation</h2>
@@ -76,7 +129,7 @@ export default function StoryDonation(): JSX.Element {
                         />
                         <button className="submit primary-btn">Donate ₦{amount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " "}</button>
                         <p className="secure">Payments secured via Paystack. Your details are safe.</p>
-                    </div>
+                    </motion.div>
                     <div className="form-image-container">
                         <img 
                           className="form-image" 

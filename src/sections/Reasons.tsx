@@ -10,10 +10,28 @@ export default function Reasons(): JSX.Element {
             className="reasons-container"
             
         >
-            <h1 className="reasons-header">Why Jason Needs Your Help</h1>
-            <p className="reasons-subtitle">
-                Born on November 3, 2016, Jason is a determined boy who deserves the chance to use his hands freely. Your support can make that possible.
-            </p>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0}}
+                layout
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ layout: {
+                type: "spring",
+                stiffness: 70,
+                damping: 20,
+                mass: 1.2
+                },
+                type: "spring",
+                stiffness: 70,
+                damping: 20,
+                mass: 1.2
+            }}  
+            >
+                <h1 className="reasons-header">Why Jason Needs Your Help</h1>
+                <p className="reasons-subtitle">
+                    Born on November 3, 2016, Jason is a determined boy who deserves the chance to use his hands freely. Your support can make that possible.
+                </p>
+            </motion.div>
             <div className="card-container">
                 <motion.div 
                     className="card"
@@ -23,13 +41,15 @@ export default function Reasons(): JSX.Element {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ layout: {
                     type: "spring",
-                    bounce: 0.35,
-                    duration: 0.6
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
                     },
                     type: "spring",
-                    stiffness: 120,
-                    damping: 14
-                }}    
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                }}  
                 >
                     <div className="icon-container">
                         <HeartHandshake className="reasons-icon"/>
@@ -42,18 +62,20 @@ export default function Reasons(): JSX.Element {
 
                 <motion.div 
                     className="card"
-                    initial={{ opacity: 0, y: 50 }}
+                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0}}
                     layout
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ layout: {
                     type: "spring",
-                    bounce: 0.35,
-                    duration: 0.6
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
                     },
                     type: "spring",
-                    stiffness: 120,
-                    damping: 14
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
                 }}  
                 >
                     <div className="icon-container">
@@ -73,12 +95,14 @@ export default function Reasons(): JSX.Element {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ layout: {
                     type: "spring",
-                    bounce: 0.35,
-                    duration: 0.6
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
                     },
                     type: "spring",
-                    stiffness: 120,
-                    damping: 14
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
                 }}  
                 >
                     

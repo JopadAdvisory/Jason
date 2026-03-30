@@ -10,13 +10,13 @@ type Props = {
 
  export default function ShareModal({ isOpen, onClose }: Props): JSX.Element | null {
     const url = window.location.href;
-    const message = ` Help Give Jason a Chance at a Normal Life
+    const message = `🙏 Help Give Jason a Chance at a Normal Life
+    
+Jason is a strong young boy born with hand deformities. Surgery can restore his hands, but time is running out.
 
-    Jason is a strong young boy born with hand deformities. Surgery can restore his hands, but time is running out.
+Please support or share ❤️
 
-    Please support or share 
-
-    ${url}`;
+${url}`;
 
     const encoded = encodeURIComponent(message);
 

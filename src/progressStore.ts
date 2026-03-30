@@ -10,7 +10,7 @@ type ProgressStore = {
 
 export const useProgressStore = create<ProgressStore>()(
     persist (
-        (get) => ({
+        (_set, get) => ({
             donors: 146,
             raised: 23_000_000,
             goal: 75_000_000,

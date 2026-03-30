@@ -49,6 +49,12 @@
 .hero-btn1 {
     font-weight: 600;
 }
+.hero-btn2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
 
 @media (min-width: 768px) {
     .img-container {

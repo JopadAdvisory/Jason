@@ -1,10 +1,15 @@
 import HeroImage from "../assets/images/1.webp";
 import type { JSX } from "react";
-import "./Hero.css";
 import { Button } from "../components/ui/buttons";
 import Progress from "../components/ui/progress";
+import { Share2 } from "lucide-react";
+import ShareModal from "../components/ui/modal";
+import { useState } from "react";
+import "./Hero.css";
 
 function Hero(): JSX.Element {
+    const [open, setOpen] = useState(false);
+
     return (
         <section 
             aria-label="Hero section showing Jason and general summary of the page"
@@ -35,12 +40,13 @@ function Hero(): JSX.Element {
                         >
                             Donate Now
                         </Button>
-                        <Button
-                            href="#story"
+                        <button
                             className="secondary-btn hero-btn2"
+                            onClick={() => setOpen(true)}
                         >
-                            Read Jason's Story
-                        </Button>
+                            <Share2 />
+                            Share Campaign
+                        </button>
                     </div>
                     <div className="progress-container">
                         <Progress 
@@ -49,6 +55,7 @@ function Hero(): JSX.Element {
                           raise="raise"
                         />
                     </div>
+                    <ShareModal isOpen={open} onClose={() => setOpen(false)} />
                 </div>
             </div>
         </section>

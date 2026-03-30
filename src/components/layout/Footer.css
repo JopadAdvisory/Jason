@@ -38,6 +38,9 @@
 .first {
     color: var(--accent);
 }
+.footer-logo {
+    text-decoration: none;
+}
 .column-two ul li a,
 .mail {
     text-decoration: none;

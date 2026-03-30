@@ -1,0 +1,77 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-container {
+    position: relative;
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.modal-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.modal-container h4 {
+    color: var(--text-h);
+    padding-bottom: 5px;
+}
+.modal-container p {
+    color: var(--text);
+    font-size: .9rem;
+}
+.modal-button {
+    padding: 14px;
+    border-radius: var(--radius);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+.modal-button:hover {
+    transform: scale(1.05);
+}
+.whatsapp {
+    background-color: #25d366;
+}
+.twitter {
+    background-color: #1d212b;
+}
+.facebook {
+    background-color: #1877f2;
+}
+.modal-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.exit {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    padding: 0;
+    background: none;
+    color: var(--text);
+    transition: color 0.3s, transform 0.3s;
+}
+.exit:hover {
+    color: red;
+    transform: scale(1.2);
+}

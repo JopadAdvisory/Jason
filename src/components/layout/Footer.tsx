@@ -10,13 +10,15 @@ export default function Footer(): JSX.Element {
             <div className="footer-container">
                 <div className="columns">
                     <div className="column-one">
-                        <h4 className="column-header">
-                            <Heart 
-                                strokeWidth={3}
-                                className="footer-icon first" 
-                            />
-                            Urgent Campaign
-                        </h4>
+                        <a href="#home" className="footer-logo">
+                            <h4 className="column-header">
+                                <Heart 
+                                    strokeWidth={3}
+                                    className="footer-icon first" 
+                                />
+                                Urgent Campaign
+                            </h4>
+                        </a>
                         <p>
                             A community-driven campaign to fund Jason's corrective hand surgery and give him a brighter future.
                         </p>
@@ -38,7 +40,7 @@ export default function Footer(): JSX.Element {
                             className="contact mail"
                         >
                             <Mail className="contact-icon" />
-                            <span>ojo370@gmail.com</span>
+                            <span>jopadvirtual247@gmail.com</span>
                         </a>
                         <p className="contact">
                             <Phone className="contact-icon" />

@@ -11,7 +11,7 @@ import './App.css'
 
 function App() {
     return (
-        <div className="app-Container">
+        <main className="app-Container">
             <NavBar />
             <Hero />
             <Reasons />
@@ -21,7 +21,7 @@ function App() {
             <Update />
             <FAQ />
             <Footer />
-        </div>
+        </main>
     )
 }
 

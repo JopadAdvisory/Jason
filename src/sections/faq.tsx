@@ -24,12 +24,12 @@ export default function FAQ(): JSX.Element {
         {
             id: 4,
             title: "How can i donate?",
-            content: "You can donate securely through the Donate Now button on this page, which uses Paystack for safe and easy payments. We accept donations in any amount — every contribution counts.",
+            content: "You can donate via direct bank transfer to: GTBank — Account Name: Okechukwu Josiah Odunna, Account Number: 0423131865. Every contribution counts. Thank you for your support!",
         },
         {
             id: 5,
             title: "Is my donation secure and trnsparent?",
-            content: "Yes. All payments are processed securely through Paystack. We provide regular updates on funds raised and how they are being used to ensure full transparency.",
+            content: "Yes. Funds go directly to the verified GTBank account. We provide regular updates on funds raised and how they are being used to ensure full transparency.",
         },
         {
             id: 6,

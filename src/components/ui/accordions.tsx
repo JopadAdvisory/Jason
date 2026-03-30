@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import type { JSX } from "react";
-import "./accordion.css"
 import { Minus, Plus } from "lucide-react";
+import "./accordion.css"
 
 export type AccordionItemType = {
     id: number,
@@ -20,7 +20,25 @@ export default function Accordion({ data}: AccordionProps): JSX.Element {
     return (
         <div className="accordion">
             {data.map((items, index) => (
-                <div key={items.id} className="accordion-item">
+                <motion.div 
+                    key={items.id} 
+                    className="accordion-item"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    }}  
+                >
                     <button 
                         onClick={() => toggle(index)}
                         className="accordion-title"
@@ -46,7 +64,7 @@ export default function Accordion({ data}: AccordionProps): JSX.Element {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </div>
+                </motion.div>
             ))}
         </div>
     )

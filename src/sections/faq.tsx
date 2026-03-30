@@ -1,6 +1,7 @@
 import type { JSX } from "react"
 import Accordion from "../components/ui/accordions";
 import type { AccordionItemType } from "../components/ui/accordions";
+import { motion } from "framer-motion";
 import "./faq.css"
 
 export default function FAQ(): JSX.Element {
@@ -43,8 +44,42 @@ export default function FAQ(): JSX.Element {
         >
             <div className="faq-container">
                 <div className="faq-header">
-                    <h2 className="faq-header">Frequently Asked Questions</h2>
-                    <p className="faq-subtitle">Find answers to common questions about Jason's campaign.</p>
+                    <motion.h2 
+                        className="faq-header"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0}}
+                        layout
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ layout: {
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        },
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        }}  
+                    >Frequently Asked Questions</motion.h2>
+                    <motion.p 
+                        className="faq-subtitle"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0}}
+                        layout
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ layout: {
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        },
+                        type: "spring",
+                        stiffness: 70,
+                        damping: 20,
+                        mass: 1.2
+                        }}  
+                    >Find answers to common questions about Jason's campaign.</motion.p>
                 </div>
                 <div className="accordion-container">
                     <Accordion data={data} />

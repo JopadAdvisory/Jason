@@ -1,6 +1,7 @@
 import {  CalendarRange, Target, TrendingUp, Users } from "lucide-react";
 import { useProgressStore } from "../progressStore";
 import Progress from "../components/ui/progress";
+import { motion } from "framer-motion";
 import "./updates.css";
 
 
@@ -15,11 +16,62 @@ export default function Update() {
           aria-label="Updates regarding jason's donation"
         >
             <div className="progress-header">
-                <h1 className="update-heading">Campaign Progress</h1>
-                <p className="update-subtitle">Stay informed on Jason's journey with full transparency on every naira raised</p>
+                <motion.h1 
+                    className="update-heading"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    }}  
+                >Campaign Progress</motion.h1>
+                <motion.p 
+                    className="update-subtitle"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    }}  
+                >Stay informed on Jason's journey with full transparency on every naira raised</motion.p>
             </div>
             <div className="wr">
-                <div className="progress-update-container">
+                <motion.div 
+                    className="progress-update-container"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0}}
+                    layout
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ layout: {
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    },
+                    type: "spring",
+                    stiffness: 70,
+                    damping: 20,
+                    mass: 1.2
+                    }}  
+                >
                     <div className="pro-bg">
                         <div className="pro-header">
                             <div className="goal">
@@ -56,15 +108,66 @@ export default function Update() {
                         </div>
                         <Progress />
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="updates container">
                     <div className="progress-header ol">
-                        <h1 className="update-heading">Recent Updates</h1>
-                        <p className="update-subtitle">Stay informed on Jason's journey</p>
+                        <motion.h1
+                            className="update-heading"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >Recent Updates</motion.h1>
+                        <motion.p 
+                            className="update-subtitle"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >Stay informed on Jason's journey</motion.p>
                     </div>
                     <div className="diff-updates">
-                        <div className="update-card">
+                        <motion.div 
+                            className="update-card"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >
                             <p className="date">
                                 <CalendarRange className="date-icon"/>
                                 March 15, 2026
@@ -72,8 +175,25 @@ export default function Update() {
                             <p className="update-text">
                                 Jason's initial consultation with the surgical team is complete. Doctors have outlined the corrective procedure plan.
                             </p>
-                        </div>
-                        <div className="update-card">
+                        </motion.div>
+                        <motion.div 
+                            className="update-card"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0}}
+                            layout
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ layout: {
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                            },
+                            type: "spring",
+                            stiffness: 70,
+                            damping: 20,
+                            mass: 1.2
+                        }}  
+                        >
                             <p className="date">
                                 <CalendarRange className="date-icon"/>
                                 March 8, 2026
@@ -81,7 +201,7 @@ export default function Update() {
                             <p className="update-text">
                                 We've reached 20% of our goal! Thank you to all 94 donors who have contributed so far.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

@@ -70,12 +70,12 @@ export default function Hands(): JSX.Element {
                         mass: 1.2
                         }}  
                     >
-                        <img 
+                        {/* <img 
                           src={HandOne} 
                           alt="First picture of jason's hands" 
                           loading="lazy"
                           className="hand-image" 
-                        />
+                        /> */}
                     </motion.div>
                     <motion.div 
                         className="hand-image-container"

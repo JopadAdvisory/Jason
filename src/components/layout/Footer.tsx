@@ -1,10 +1,15 @@
-import type { JSX } from "react";
+import { useState, type JSX } from "react";
 import "./Footer.css";
 import { Copyright, Heart, Mail, Phone } from "lucide-react";
 
 export default function Footer(): JSX.Element {
+    const [revealed, setRevealed] = useState<boolean>(false);
     const today: Date = new Date();
     const year: number = today.getFullYear();
+
+    const parts: string[] = ["jopad", "gmail", "virtual", "247", "com"];
+
+    const email: string = `${parts[0] + parts[2] + parts[3]}@${parts[1]}.${parts[1]}`;
     return (
         <div className="footer-container-bg">
             <div className="footer-container">
@@ -36,11 +41,13 @@ export default function Footer(): JSX.Element {
                     <div className="column-three">
                         <h5 className="column-header">Contact</h5>
                         <a  
-                            href="mailto:ojo370@gmail.com"
+                            href={`mailto:${email}`}
                             className="contact mail"
+                            onClick={() => setRevealed(true)}
                         >
                             <Mail className="contact-icon" />
-                            <span>jopadvirtual247@gmail.com</span>
+                            {revealed ?
+                            <span>jopadvirtual247@gmail.com</span> : <span>Email</span>}
                         </a>
                         <p className="contact">
                             <Phone className="contact-icon" />

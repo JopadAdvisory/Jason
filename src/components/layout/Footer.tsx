@@ -9,7 +9,7 @@ export default function Footer(): JSX.Element {
 
     const parts: string[] = ["jopad", "gmail", "virtual", "247", "com"];
 
-    const email: string = `${parts[0] + parts[2] + parts[3]}@${parts[1]}.${parts[1]}`;
+    const email: string = `${parts[0] + parts[2] + parts[3]}@${parts[1]}.${parts[4]}`;
     return (
         <div className="footer-container-bg">
             <div className="footer-container">
@@ -47,7 +47,7 @@ export default function Footer(): JSX.Element {
                         >
                             <Mail className="contact-icon" />
                             {revealed ?
-                            <span>jopadvirtual247@gmail.com</span> : <span>Email</span>}
+                            <span>{email}</span> : <span>Email</span>}
                         </a>
                         <p className="contact">
                             <Phone className="contact-icon" />

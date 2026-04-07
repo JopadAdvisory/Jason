@@ -9,7 +9,7 @@ export default function FAQ(): JSX.Element {
         {
             id: 1,
             title: "Who is Jason and what is his condition?",
-            content: "Jason Chukwuemeka Odunna is a young boy born on November 3, 2016, living with congenital deformities affecting both hands. His condition includes overlapping digits, joint stiffness, and restricted movement, making everyday tasks extremely difficult.",
+            content: "Jason is a young boy born on November 3, 2016, living with congenital deformities affecting both hands. His condition includes overlapping digits, joint stiffness, and restricted movement, making everyday tasks extremely difficult.",
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ export default function FAQ(): JSX.Element {
         {
             id: 4,
             title: "How can i donate?",
-            content: "You can donate via direct bank transfer to: GTBank — Account Name: Okechukwu Josiah Odunna, Account Number: 0423131865. Every contribution counts. Thank you for your support!",
+            content: "You can donate via direct bank transfer to: GTBank — Account Name: Jason, Account Number: 0423131865. Every contribution counts. Thank you for your support!",
         },
         {
             id: 5,

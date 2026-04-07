@@ -152,7 +152,7 @@ export default function StoryDonation(): JSX.Element {
                                     <span>Bank Transfer Details</span>
                                 </h4>
                                 <p className="bank">Bank: <span className="property">GTBank (Guaranty Trust)</span></p>
-                                <p className="name">Account Name: <span className="property">Jason Chukwuemeka Odunna</span></p>
+                                <p className="name">Account Name: <span className="property">Jason</span></p>
                                 <p className="bank-number">
                                     <span>Account No: <span className="property">0423131865</span></span>
                                     <button 

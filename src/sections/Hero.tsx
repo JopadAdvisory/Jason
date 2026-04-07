@@ -23,6 +23,7 @@ function Hero(): JSX.Element {
                           src={HeroImage} 
                           alt="Jason smiling with his family" 
                           loading="lazy"
+                          fetchPriority="high"
                           className="hero-image" 
                         />
                     </div>

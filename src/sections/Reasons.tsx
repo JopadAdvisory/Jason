@@ -74,7 +74,7 @@ export default function Reasons(): JSX.Element {
                     </div>
                     <h4>A Brave Young Boy</h4>
                     <p>
-                        Jason Chukwuemeka Odunna is a bright and resilient young boy whose life has been shaped by a congenital condition affecting both hands.
+                        Jason is a bright and resilient young boy whose life has been shaped by a congenital condition affecting both hands.
                     </p>
                 </motion.div>
 

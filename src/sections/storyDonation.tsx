@@ -1,5 +1,5 @@
 import { Check, Copy, Eye, Heart, ReceiptText } from "lucide-react";
-import StoryImage from "../assets/images/6.webp";
+import StoryImage from "../assets/images/9.webp";
 import FormImage from "../assets/images/5.webp"
 import { useState, type JSX } from "react";
 import { motion } from "framer-motion";
@@ -31,7 +31,9 @@ export default function StoryDonation(): JSX.Element {
         return (
             <div className="confirm">
                 <p className="confirm-text">
-                    To protect the privacy of the beneficiary, donation details are only revealed to genuine supporters. By proceeding, you confirm your intent to make a donation.
+                    To protect the privacy of the beneficiary,
+                     donation details are only revealed to genuine supporters. 
+                    By proceeding, you confirm your intent to make a donation.
                 </p>
             </div>
         )
@@ -39,13 +41,13 @@ export default function StoryDonation(): JSX.Element {
    
    const Body = () => {
         return (
-            <div className="confirm">
+            <div className="confrm">
                 <div className="gtb-account">
                     <div className="bank-text">
-                        <h4>
+                        <h3>
                             <ReceiptText size={18}/>
                             <span>Bank Transfer Details</span>
-                        </h4>
+                        </h3>
                         <p className="bank">Bank: <span className="property">GTBank (Guaranty Trust)</span></p>
                         <p className="name">Account Name: <span className="property">0. Jason 0.</span></p>
                         <p className="bank-number">
@@ -208,7 +210,6 @@ export default function StoryDonation(): JSX.Element {
                                 Proceed to view donation details
                             </button>
                         </div>
-                        <p className="secure">Transfer directly to the verified GTBank account above. Every naira counts.</p>
 
                     </motion.div>
                     <motion.div 

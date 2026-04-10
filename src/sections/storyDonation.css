@@ -68,7 +68,16 @@
 .full-story:hover {
     border-bottom: 1px solid var(--accent);
 }
-
+.bank-text h3 {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.bank-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .donation-container {
     background-color: var(--card);
     padding: 30px;
@@ -77,13 +86,15 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .confirm {
-    /* text-align: center; */
     padding-bottom: 20px;
     margin-top: -10px;
 }
 .confirm-text {
-    font-size: .8rem !important;
     text-align: center;
+    font-size: 1rem ! important;
+}
+.property {
+    color: var(--text-h);
 }
 .donation-header {
     text-align: center;
@@ -109,14 +120,9 @@
     margin-block: 20px;
 }
 .gtb-account p {
-    font-size: .85rem;
     font-weight: 600;
 }
-.secure {
-    margin-top: 10px;
-    font-size: .8rem;
-    text-align: center;
-}
+
 .copy-btn {
     background-color: transparent;
     color: var(--accent);

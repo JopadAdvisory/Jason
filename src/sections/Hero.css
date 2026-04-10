@@ -23,7 +23,7 @@
     display: block;
     height: 400px;
     width: 100%;
-    object-position: -10px 5%;
+    object-position: -10px 35%;
     transform: scale(1.2);
     object-fit: cover;
     border-radius: var(--radius);
@@ -62,12 +62,11 @@
     }
 
     .hero-bg {
-        background: url("../assets/images/hero.webp");
-        background-repeat: none;
+        background: url("../assets/images/3.webp");
+        background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
         background-color: var(--secondary-bg);
-        background-position: 0 40px;
         min-height: clamp(540px, 80vh, 720px);
 
         margin-top: initial;
@@ -105,7 +104,6 @@
         height: 100%;
         position: relative;
         z-index: 1;
-        padding-top: 100px;
     }
 
     .raise {

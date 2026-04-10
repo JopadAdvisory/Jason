@@ -1,4 +1,4 @@
-import type { JSX } from "react"
+import { type JSX } from "react"
 import Accordion from "../components/ui/accordions";
 import type { AccordionItemType } from "../components/ui/accordions";
 import { motion } from "framer-motion";

@@ -1,4 +1,4 @@
-import HeroImage from "../assets/images/1.webp";
+import HeroImage from "../assets/images/2.webp";
 import type { JSX } from "react";
 import { Button } from "../components/ui/buttons";
 import Progress from "../components/ui/progress";

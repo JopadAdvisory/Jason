@@ -103,7 +103,7 @@
     .hero-content {
         height: 100%;
         position: relative;
-        padding-block: 100px 50px;
+        padding-block: 80px 50px;
         z-index: 1;
     }
 

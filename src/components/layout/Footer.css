@@ -67,6 +67,7 @@
     border: none;
     background: transparent;
     align-items: center;
+    cursor: pointer;
     gap: 5px;
 }
 .contact-icon {

@@ -1,14 +1,17 @@
-import { Check, Copy, Heart, ReceiptText } from "lucide-react";
+import { Check, Copy, Eye, Heart, ReceiptText } from "lucide-react";
 import StoryImage from "../assets/images/6.webp";
 import FormImage from "../assets/images/5.webp"
 import { useState, type JSX } from "react";
 import { motion } from "framer-motion";
 import "./storyDonation.css";
+import { DetailsModal } from "../components/ui/modal";
 
 
 
 export default function StoryDonation(): JSX.Element {
    const [copied, setCopied] = useState<boolean>(false);
+   const [open, setOpen] = useState<boolean>(false);
+   const [confirm, setConfirm] = useState<boolean>(true);
 
    const handleCopy = async (): Promise<void> => {
     const accountNumber = "0423131865";
@@ -23,6 +26,45 @@ export default function StoryDonation(): JSX.Element {
         console.error("copy failed:", error);
     }
    };
+
+   const ConfirmBody = () => {
+        return (
+            <div className="confirm">
+                <p className="confirm-text">
+                    To protect the privacy of the beneficiary, donation details are only revealed to genuine supporters. By proceeding, you confirm your intent to make a donation.
+                </p>
+            </div>
+        )
+   } 
+   
+   const Body = () => {
+        return (
+            <div className="confirm">
+                <div className="gtb-account">
+                    <div className="bank-text">
+                        <h4>
+                            <ReceiptText size={18}/>
+                            <span>Bank Transfer Details</span>
+                        </h4>
+                        <p className="bank">Bank: <span className="property">GTBank (Guaranty Trust)</span></p>
+                        <p className="name">Account Name: <span className="property">0. Jason 0.</span></p>
+                        <p className="bank-number">
+                            <span>Account No: <span className="property">0423131865</span></span>
+                            <button 
+                                className="copy-btn"
+                                onClick={handleCopy} 
+                                type="button"
+                                >
+                                {copied ? <Check size={16} /> : <Copy size={16} />}
+                                <span>{copied ? "Copied" : "Copy"}</span>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <p className="confirm-text">Transfer directly to the verified GTBank account above. Every naira counts.</p>
+            </div>
+        )
+   } 
 
     return (
         <section 
@@ -147,27 +189,27 @@ export default function StoryDonation(): JSX.Element {
                         </div>
                         <div className="gtb-account">
                            <div className="bank-text">
-                                <h4>
-                                    <ReceiptText size={18}/>
-                                    <span>Bank Transfer Details</span>
-                                </h4>
-                                <p className="bank">Bank: <span className="property">GTBank (Guaranty Trust)</span></p>
-                                <p className="name">Account Name: <span className="property">Jason</span></p>
-                                <p className="bank-number">
-                                    <span>Account No: <span className="property">0423131865</span></span>
-                                    <button 
-                                        className="copy-btn"
-                                        onClick={handleCopy} 
-                                        type="button"
-                                        >
-                                        {copied ? <Check size={16} /> : <Copy size={16} />}
-                                        <span>{copied ? "Copied" : "Copy"}</span>
-                                    </button>
-                                </p>
+                                <h3>
+                                    <span>How Funds are Used</span>
+                                </h3>
+                                <ul>
+                                    <li>Corrective hand surgery & skin grafts</li>
+                                    <li>Hospital care & rehabilitation</li>
+                                    <li>Travel & accommodation for treatment</li>
+                                </ul>
                            </div>
                         </div>
-                       
+                        <div className="bank-btn">
+                            <button
+                                className="primary-btn hero-btn2 sty"
+                                onClick={() => setOpen(true)}
+                            >
+                                <Eye />
+                                Proceed to view donation details
+                            </button>
+                        </div>
                         <p className="secure">Transfer directly to the verified GTBank account above. Every naira counts.</p>
+
                     </motion.div>
                     <motion.div 
                         className="form-image-container"
@@ -193,6 +235,18 @@ export default function StoryDonation(): JSX.Element {
                           src={FormImage} alt="A picture of jason's hand" 
                         />
                     </motion.div>
+                    <DetailsModal
+                        isOpen={open}
+                        onClose={() => {
+                            setOpen(false);
+                            setConfirm(true)
+                        }}
+                        confirmationOpen={confirm}
+                        confirmClose={() => setConfirm(false)}
+                        head={"Donation Details"}
+                        confirmBody={ConfirmBody}
+                        body={Body}
+                    />
                 </div> 
                     
             </div>

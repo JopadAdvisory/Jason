@@ -1,14 +1,19 @@
-import {  type JSX } from "react";
+import React, {  type JSX } from "react";
 import "./modal.css";
 import { Link, X } from "lucide-react";
 import { BsFacebook, BsTwitterX, BsWhatsapp } from "react-icons/bs";
 
 type Props = {
     isOpen: boolean;
+    confirmationOpen?: boolean;
+    head?: React.ReactNode;
+    confirmBody?: () => JSX.Element;
+    body?: () => JSX.Element;
     onClose: () => void;
+    confirmClose?: () => void;
 }
 
- export default function ShareModal({ isOpen, onClose }: Props): JSX.Element | null {
+function ShareModal({ isOpen, onClose }: Props): JSX.Element | null {
     const url = window.location.href;
     const message = `🙏 Help Give Jason a Chance at a Normal Life
     
@@ -65,3 +70,53 @@ ${url}`;
         </div>
     )
  }
+
+function DetailsModal({ 
+    isOpen, 
+    onClose, 
+    confirmClose, 
+    confirmationOpen, 
+    head, 
+    confirmBody,
+    body 
+}: Props): JSX.Element | null {
+    if (!isOpen) return null;
+
+    return (
+        <div className="modal-overlay">
+            <div className="modal-container">
+                <div className="modal-header">
+                    {
+                        confirmationOpen ?
+                            <h4>Confirm Your Intent</h4> :
+                            <h4>{head}</h4>
+                    }
+                </div>
+                <div className="modal-body">
+                    {
+                        confirmationOpen ?
+                            <p>{confirmBody?.()}</p>:
+                            <p>{body?.()}</p>
+                    }
+                </div>
+                <div className="modal-buttons">
+                    { confirmationOpen &&
+                        <>
+                            <button onClick={onClose}    className="secondary-btn cancel">
+                                Cancel
+                            </button>
+                            <button onClick={confirmClose}    className="primary-btn cancel">
+                                Yes, show Details
+                            </button>
+                        </>
+                    }
+                    <button onClick={onClose}    className="modal-button exit">
+                        <X />
+                    </button>
+                </div>
+            </div>
+        </div>
+    )
+ }
+
+ export { ShareModal, DetailsModal };

@@ -3,7 +3,7 @@ import type { JSX } from "react";
 import { Button } from "../components/ui/buttons";
 import Progress from "../components/ui/progress";
 import { Share2 } from "lucide-react";
-import ShareModal from "../components/ui/modal";
+import { ShareModal } from "../components/ui/modal";
 import { useState } from "react";
 import "./Hero.css";
 
@@ -29,7 +29,7 @@ function Hero(): JSX.Element {
                     </div>
                     <h1 className="hero-heading">Help Jason Use His Hands Again</h1>
                     <p className="hero-subtitle">
-                        Jason was born with congenital deformities affecting both hands, making everyday tasks a struggle. He urgently needs corrective surgery to live a normal, independent life.
+                       A young boy was born with congenital deformities affecting both hands, making everyday tasks a struggle. He urgently needs corrective surgery to live a normal, independent life.
                     </p>
                     <p className="hero-sub">
                         Doctors recommend surgery before his bones grow stronger — early intervention is critical for success.

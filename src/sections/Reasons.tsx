@@ -47,7 +47,7 @@ export default function Reasons(): JSX.Element {
                     mass: 1.2
                 }} 
                 >
-                    Born on November 3, 2016, Jason is a determined boy who deserves the chance to use his hands freely. Your support can make that possible.
+                   Jason is a determined young boy who deserves the chance to use his hands freely. Your support can make that possible.
                 </motion.p>
             </div>
             <div className="card-container">
@@ -74,7 +74,7 @@ export default function Reasons(): JSX.Element {
                     </div>
                     <h4>A Brave Young Boy</h4>
                     <p>
-                        Jason is a bright and resilient young boy whose life has been shaped by a congenital condition affecting both hands.
+                       Jason is a bright and resilient child whose life has been shaped by a congenital condition affecting both hands since birth.
                     </p>
                 </motion.div>
 

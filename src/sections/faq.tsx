@@ -8,33 +8,38 @@ export default function FAQ(): JSX.Element {
     const data: AccordionItemType[] = [
         {
             id: 1,
-            title: "Who is Jason and what is his condition?",
-            content: "Jason is a young boy born on November 3, 2016, living with congenital deformities affecting both hands. His condition includes overlapping digits, joint stiffness, and restricted movement, making everyday tasks extremely difficult.",
+            title: "Who is this campaign for?",
+            content: "This campaign supports Jason, a young boy born with congenital deformities affecting both hands. His condition includes joint stiffness and restricted movement, making everyday tasks extremely difficult.",
         },
         {
             id: 2,
             title: "Why is the surgery urgent?",
-            content: "Doctors recommend corrective surgery before Jason's bones grow stronger. Early intervention is critical — as he gets older, bone development will progress and limit treatment effectiveness, potentially making his condition permanent.",
+            content: "Doctors recommend corrective surgery before his bones grow stronger. Early intervention is critical — as he gets older, bone development will progress and limit treatment effectiveness.",
         },
         {
             id: 3,
             title: "How will the donated funds be used?",
-            content: "All funds raised will go directly towards Jason's corrective hand surgery, including skin graft plastic surgery, pre-operative consultations, hospital fees, post-operative care, and rehabilitation therapy.",
+            content: "All funds raised will go directly towards corrective hand surgery, including skin grafts, pre-operative consultations, hospital fees, post-operative care, and rehabilitation therapy.",
         },
         {
             id: 4,
             title: "How can i donate?",
-            content: "You can donate via direct bank transfer to: GTBank — Account Name: Jason, Account Number: 0423131865. Every contribution counts. Thank you for your support!",
+            content: "Click the 'Donate Now' button on this page. You'll be guided through a secure process to view verified bank transfer details. We protect payment information to prevent misuse.",
         },
         {
             id: 5,
             title: "Is my donation secure and trnsparent?",
-            content: "Yes. Funds go directly to the verified GTBank account. We provide regular updates on funds raised and how they are being used to ensure full transparency.",
+            content: "We prioritize the safety and privacy of the child. Detailed personal information is shared only with verified donors and supporters to prevent misuse of a minor's identity.",
         },
         {
             id: 6,
+            title: "Why is personal information limited on this page?",
+            content: "We prioritize the safety and privacy of the child. Detailed personal information is shared only with verified donors and supporters to prevent misuse of a minor's identity.",
+        },
+        {
+            id: 7,
             title: "Can i help in ways other than donating?",
-            content: "Absolutely! Sharing Jason's story on social media, WhatsApp, or with friends and family can make a huge difference. The more people who know about Jason's campaign, the closer we get to our goal.",
+            content: "Absolutely! Sharing this campaign on social media, WhatsApp, or with friends and family can make a huge difference. The more people who know, the closer we get to our goal.",
         },
     ]
     return (
@@ -79,7 +84,7 @@ export default function FAQ(): JSX.Element {
                         damping: 20,
                         mass: 1.2
                         }}  
-                    >Find answers to common questions about Jason's campaign.</motion.p>
+                    >Find answers to common questions about this campaign.</motion.p>
                 </div>
                 <div className="accordion-container">
                     <Accordion data={data} />
